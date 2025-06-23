@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo_utils.c                                      :+:      :+:    :+:   */
+/*   ft_atio.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkhairi <hkhairi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/01 11:29:37 by hkhairi           #+#    #+#             */
-/*   Updated: 2025/05/01 20:38:22 by hkhairi          ###   ########.fr       */
+/*   Created: 2025/05/18 10:22:17 by hkhairi           #+#    #+#             */
+/*   Updated: 2025/06/04 22:06:06 by hkhairi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosophers.h"
+#include "./philosopher_bonus.h"
 
-
-int	ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
 	unsigned long long	result;
 	int					sign;
@@ -34,12 +33,4 @@ int	ft_atoi(const char *str)
 		str++;
 	}
 	return (result * sign);
-}
-
-long get_time()
-{
-    struct timeval tv;
-
-    gettimeofday(&tv, NULL);
-    return ((tv.tv_sec * 1000) + (tv.tv_sec / 1000));
 }
